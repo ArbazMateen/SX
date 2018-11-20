@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SentinelX</title>
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	
+	<!-- JS -->
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+	
+	<!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+
+	<script type="text/javascript" src="./js/firebase.config.js"></script>
+	<script type="text/javascript" src="./js/login.first.js"></script>
+	
+</head>
+<body>
+
+	<div class="top-bar">
+		<div class="col-3 left">
+			<div class="media">
+				<image class="logo-small mr-2" src="./images/logo.png"/>
+				<div class="media-body">
+					<h1 class="mt-0 title-small">SentinelX</h1>
+				</div>
+			</div>
+		</div>
+		<div class="col-3 media right">
+			<image id="userProfileImage" class="logo-small mr-1" src="./images/logo.png"/>
+			<div class="media-body">
+				<h1 id="userProfileUsername" class="title-user">Username</h1>
+				<h5 id="userProfileEmail" class="email-user">someuser@yahoo.com</h5>
+			</div>
+			<h4 id="logout">Logout</h4>
+		</div>
+	</div>
+
+	<div class="side-bar">
+		<!--
+		<div class="row">
+			<div class="col-6 tabs"><h5>Users</h5></div>
+			<div class="col-6 tabs"><h5>History</h5></div>
+		</div>
+		-->
+		<div class="row">
+			<div class="col">
+				<ul id="users-list">
+               	<!-- <li><div class="article-author"><div class="avatar article-avatar"><img src="./images/logo.png" class="user-avatar"></div><div class="article-meta"><h2 class="user-title"><span class="status offline">&#8226; </span>UserX</h2><div class="article-updated meta-data">userx@gmail.com</div></div></div></li> -->
+            	</ul> 
+			</div>
+		</div>
+	</div>
+
+	<div id="map"></div>
+
+	<script>
+        const API_KEY = "AIzaSyBN-qLCZv22Oibkw3KXyEhyVD59dPuiog0";
+        var mGoogleMap;
+        function initMap() {
+            var mapOptions = {
+                center: new google.maps.LatLng(30.235790, 71.574087),
+                zoom: 10,
+                mapTypeId: google.maps.MapTypeId.NORMAL
+            }
+            mGoogleMap = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN-qLCZv22Oibkw3KXyEhyVD59dPuiog0&callback=initMap"></script> 
+	
+	<script type="text/javascript" src="./js/map.js"></script>
+</body>
+</html>

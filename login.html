@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SentinelX Login</title>
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	
+	<!-- JS -->
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+	
+	<!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
+
+	<script type="text/javascript" src="./js/firebase.config.js"></script>
+	
+</head>
+<body>
+	<div class="back-img"></div>
+	<div class="back"></div>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="login-form">
+				<div class="col">
+					<div class="media">
+						<image class="logo mr-3" src="./images/logo.png"/>
+						<div class="media-body">
+							<h1 class="mt-0 title">SentinelX</h1>
+						</div>
+					</div>
+				</div>
+				<div class="w-100"><hr /></div>
+				<div class="col">
+					<br />
+					<div class="col" style="padding-right: 0px;padding-left: 0px;">
+						<!-- <label for="validationServerUsername">Email:</label> -->
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroupPrepend3"><i class="fa fa-user"></i></span>
+							</div>
+							<input type="text" class="form-control" id="validationEmail" placeholder="Email*" aria-describedby="inputGroupPrepend3" required>
+							<div class="invalid-feedback invivible" id="invalidEmailMsg">
+								Invalid email address...!
+							</div>
+						</div>
+					</div>
+						<br />
+					<div class="col" style="padding-right: 0px;padding-left: 0px;">
+						<!-- <label for="validationServerUsername">Password:</label> -->
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text" id="inputGroupPrepend3"><i class="fa fa-lock"></i></span>
+							</div>
+							<input type="password" class="form-control" id="validationPassword" placeholder="Password*" aria-describedby="inputGroupPrepend3" required>
+							<div class="invalid-feedback invivible" id="invalidPasswordMsg">
+								Invalid password...!
+							</div>
+						</div>
+					</div>
+					<br />
+					<div class="form-group form-check">
+						<input type="checkbox" class="form-check-input" id="rememberMe">
+						<label class="form-check-label" for="exampleCheck1">Remember me.</label>
+					</div>
+					<!-- <br /> -->
+					<button type="button" id="loginBtn" class="btn btn-lg btn-block login-btn">Login</button>
+					<br />
+					<div class="col">
+						<a class="link left" href="signup.html">Signup</a>
+						<a class="link right" onclick="forgotPassword()" href="#">Forgot Password</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="./js/login.js"></script>
+</body>
+</html>
